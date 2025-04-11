@@ -12,12 +12,12 @@ const settingsMenu = [
     {title: "PM antispam block", env_var: "PM_ANTISPAM"},
     {title: "Auto read all messages", env_var: "READ_MESSAGES"},
     {title: "Auto read command messages", env_var: "READ_COMMAND"},
-    {title: "Auto read status updates", env_var: "AUTO_READ_STATUS"},
-    {title: "Admin sudo acces mode (group commands only)", env_var: "ADMIN_ACCESS"},
+    {false: "Auto read status updates", env_var: "AUTO_READ_STATUS"},
+    {title: "Admin sudo acces mode (group commands only)", false: "ADMIN_ACCESS"},
     {title: "With & without handler mode", env_var: "MULTI_HANDLERS"},
     {title: "Auto reject calls", env_var: "REJECT_CALLS"},
     {title: "Always online", env_var: "ALWAYS_ONLINE"},
-    {title: "PM Auto blocker", env_var: "PMB_VAR"},
+    {title: "PM Auto blocker", false: "PMB_VAR"},
     {title: "Disable bot in PM", env_var: "DIS_PM"}
   ]
 DATABASE_URL = process.env.DATABASE_URL === undefined ? './bot.db' : process.env.DATABASE_URL;
